@@ -29,6 +29,11 @@ namespace task_book
             Age++;
         }
 
+        public void GrowOld(int number)
+        {
+            this.Age = this.Age + number;
+        }
+
         public void PrintPersonInfo()
         {
             Console.WriteLine($"Nimi: {Name}\nIkä: {Age}\nAikuinen: {IsAdult()}");

@@ -8,6 +8,8 @@ namespace task_book
         {
             Person personAmanda = new Person();
             personAmanda.Name = "Amanda V";
+            Console.WriteLine($"Amandan ikä: {personAmanda.GetAge()}");
+            personAmanda.GrowOld(22);
             personAmanda.GrowOld();
             personAmanda.PrintPersonInfo();
 
@@ -16,7 +18,6 @@ namespace task_book
             newPerson.GrowOld();
             newPerson.PrintPersonInfo();
             Console.ReadKey();
-
         }
     }
 }
