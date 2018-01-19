@@ -29,18 +29,18 @@ namespace TaskEmployee
 
         public void PrintEmployeeInfo()
         {
-            Console.WriteLine($"Name = {Name}\nId = {Id}\nPosition = {Position}\nSalary = {Salary:f2}");
+            Console.WriteLine($"Name = {Name}\nId = {Id}\nPosition = {Position}\nSalary = {Salary:f2}\n");
         }
 
         public void CompareSalary(Employee worker)
         {
             if (Salary > worker.Salary)
             {
-                Console.WriteLine($"{Name} has bigger salary than {worker.Name} - {Salary - worker.Salary}");
+                Console.WriteLine($"{Name} has bigger salary than {worker.Name} - {Salary - worker.Salary}\n");
             }
             else
             {
-                Console.WriteLine($"{worker.Name} has bigger salary than {Name} - {worker.Salary - Salary}");
+                Console.WriteLine($"{worker.Name} has bigger salary than {Name} - {worker.Salary - Salary}\n");
             }
         }
     }
