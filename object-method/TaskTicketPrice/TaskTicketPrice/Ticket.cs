@@ -6,50 +6,63 @@ namespace TaskTicketPrice
 {
     class Ticket
     {
-        private int _age;
-        private string _occupation;
-        private int _price;
+        public int Age;
+        public double Price;
+        private bool _isStudent;
+        private bool _isSoldier;
+        private bool _isMtk;
+
+        public bool IsStudent { get => _isStudent; set => _isStudent = value; }
+        public bool IsSoldier { get => _isSoldier; set => _isSoldier = value; }
+        public bool IsMtk { get => _isMtk; set => _isMtk = value; }
 
         public Ticket()
         {
-            _age = 0;
-            _occupation = "unknown";
+            Age = 0;
+            Price = 16;
         }
 
-        public Ticket(int age, string occupation)
+        public Ticket(int age, double price)
         {
-            _age = age;
-            _occupation = occupation;
+            Age = age;
+            Price = 16;
         }
 
-        int price = 16;
-
-        public void AskData()
+        public void GetPrice()
         {
-            Console.Write("Input age: ");
-            string userInput = Console.ReadLine();
-            _age = int.Parse(userInput);
-
-            Console.Write("Input occupation (MTK, student, army, none): ");
-            string userInput1 = Console.ReadLine();
-            _occupation = userInput1;
-
-
-            if (_age >= 65 || _age >= 7 && < 15) ;
+            if (Age < 7)
             {
-                price = price / 2;
+                Price = 0;
+            }
+            else if (Age >= 7 && Age <= 15 || Age >= 65)
+            {
+                Price = 16 * 0.5;
             }
 
-            else if (_age > 7)
+            else if (IsSoldier == true)
             {
-                price = 0;
+                Price = 16 * 0.5;
             }
 
+            else if (IsStudent == true)
+            {
+                Price = 16 * 0.55;
+            }
+            else if (IsMtk == true)
+            {
+                Price = 16 * 0.85;
+            }
+
+            else if (IsMtk == true && IsStudent == true)
+            {
+                Price = 16 * 0.5;
+            }
             else
             {
-                price = 16;
+                Price = 16;
             }
 
-        }
+            Console.WriteLine($"Pricepsf: {Price}");
+        }   
     }
 }
