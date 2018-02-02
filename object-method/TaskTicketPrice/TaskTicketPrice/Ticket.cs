@@ -62,7 +62,7 @@ namespace TaskTicketPrice
                 Price = 16;
             }
 
-            Console.WriteLine($"Pricepsf: {Price}");
+            Console.WriteLine($"\nPrice: {Price}");
         }   
     }
 }

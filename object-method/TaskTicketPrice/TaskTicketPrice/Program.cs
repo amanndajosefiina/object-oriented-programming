@@ -8,20 +8,31 @@ namespace TaskTicketPrice
         {
             Ticket customer = new Ticket();
 
-            Console.WriteLine("Enter age: ");
-            string userInput = Console.ReadLine();
-            int Age = int.Parse(userInput);
+            int age = -1;
+            while (age < 0)
+            {
+                Console.Write("Enter age: ");
+                if (!int.TryParse(Console.ReadLine(), out age))
+                {
+                    Console.WriteLine("Invalid age!");
+                    age = -1;
+                }
+                else
+                {
+                    customer.Age = age;
+                }
 
-            customer.IsStudent = YesNo("Are you a student? Answer Yes or No.");
-            customer.IsMtk = YesNo("Are you a member of MTK? Answer Yes or No.");
-            customer.IsSoldier = YesNo("Are you a soldier? Answer Yes or No.");
+                customer.IsStudent = YesNo("\nAre you a student? Answer Y or N.");
+                customer.IsMtk = YesNo("\nAre you a member of MTK? Answer Y or N.");
+                customer.IsSoldier = YesNo("\nAre you a soldier? Answer Y or N.");
 
-            customer.GetPrice();
+                customer.GetPrice();
 
-            Console.ReadKey();
+                Console.ReadKey();
+            }
         }
 
-        public static bool YesNo(string message)
+         public static bool YesNo(string message)
         {
             Console.WriteLine(message);
             string answer = Console.ReadLine().ToUpper();
