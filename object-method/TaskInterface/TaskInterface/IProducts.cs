@@ -6,7 +6,7 @@ namespace TaskInterface
 {
     interface IProducts
     {
-        void AddProduct(Product product);
+        void AddProduct(Product[] product);
 
         void PrintProducts();
     }

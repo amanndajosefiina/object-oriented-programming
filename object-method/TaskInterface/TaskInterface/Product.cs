@@ -31,13 +31,13 @@ namespace TaskInterface
 
         public string SearchProduct(Product pdt)
         {
-            Console.Write("Search product; ");
+            Console.Write("Search product: ");
             string userInput = Console.ReadLine();
             ProductName = userInput;
 
             if (ProductName == pdt.ProductName)
             {
-               return $"Name: {pdt.ProductName}\nPrice: {pdt.Price}\nNumber of products: {pdt.NumberOfProducts}";
+               return $"\nName: {pdt.ProductName}\nPrice: {pdt.Price}\nNumber of products: {pdt.NumberOfProducts}\n";
             }
             else
             {

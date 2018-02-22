@@ -6,7 +6,7 @@ namespace TaskInterface
 {
     interface ICustomers
     {
-        void AddCustomer(Customer customer);
+        void AddCustomer(Customer[] customers);
 
         void PrintCustomer();
     }

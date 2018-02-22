@@ -34,7 +34,7 @@ namespace TaskInterface
 
             if (CustomerName == ctm.CustomerName)
             {
-                return $"Customer's name: {ctm.CustomerName}\nItems: {ctm.Items}\n)";
+                return $"\nCustomer's name: {ctm.CustomerName}\nItems: {ctm.Items}\n";
             }
             else
             {
